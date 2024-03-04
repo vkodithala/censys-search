@@ -5,6 +5,7 @@ This repo contains a bare-bones replica of the Censys Search platform developed 
 - `public/` contains all of the resources used elsewhere in the frontend
 - `src/components` contains the two components used by the App.tsx file on the frontend
 - `src` contains all of the core frontend logic
+
 This project was developed entirely with Typescript using create-react-app. `npm` was used for dependency management.
 
 ## Installation
