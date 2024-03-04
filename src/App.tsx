@@ -28,8 +28,6 @@ export default function App() {
   }
 
   useEffect(() => {
-    console.log(searchInput);
-    console.log(page);
     if (searchInput != "") {
       setLoading(true);
       fetchResult(searchInput);
@@ -63,13 +61,11 @@ export default function App() {
         }
       }
       const result = await response.json();
-      console.log(result);
       if (result?.result?.hits) {
         const newData: HostData[] = result.result.hits.map((element: any) => ({
           address: element.ip,
           num_protocols: element.services.length
         }));
-        console.log(newData);
         showResults(newData);
       } else {
         setHostResults([]);
